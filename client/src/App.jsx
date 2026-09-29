@@ -58,8 +58,9 @@ export default function App() {
   return (
     <div className='app'>
       <header className='header'>
-        <h1>Google Play Explorer</h1>
-        <p>Consumo de API SerpAPI con React</p>
+        <div className='header-logo'>▶</div>
+        <h1><strong>Googoo Play Store</strong></h1>
+        <p>SerpAPI · React</p>
       </header>
 
       <SearchBar onSearch={setQuery} initialValue={query} />
@@ -71,7 +72,7 @@ export default function App() {
 
         <section className='gallery-panel'>
           {loading ? (
-            <p className='loading'>Cargando...</p>
+            <p className='loading'>Cargando</p>
           ) : (
             <div className='grid'>
               {pageItems.map((app, i) => (
