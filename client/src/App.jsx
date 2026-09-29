@@ -76,7 +76,7 @@ export default function App() {
             <div className='grid'>
               {pageItems.map((app, i) => (
                 <AppCard
-                  key={${app.product_id}-}
+                  key={app.product_id + '-' + i}
                   app={app}
                   onClick={() => setSelected(app)}
                   active={selected?.product_id === app.product_id}

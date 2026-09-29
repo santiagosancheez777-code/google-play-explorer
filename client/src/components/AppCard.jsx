@@ -1,6 +1,8 @@
 ﻿export default function AppCard({ app, onClick, active }) {
+  const cardClass = 'card' + (active ? ' card--active' : '');
+
   return (
-    <div className={card } onClick={onClick}>
+    <div className={cardClass} onClick={onClick}>
       <img src={app.thumbnail} alt={app.title} />
       <div className='card-body'>
         <h4>{app.title}</h4>

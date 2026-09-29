@@ -9,15 +9,18 @@
         Anterior
       </button>
 
-      {Array.from({ length: total }, (_, i) => i + 1).map((n) => (
-        <button
-          key={n}
-          className={page-btn }
-          onClick={() => onChange(n)}
-        >
-          {n}
-        </button>
-      ))}
+      {Array.from({ length: total }, (_, i) => i + 1).map((n) => {
+        const btnClass = 'page-btn' + (n === current ? ' active' : '');
+        return (
+          <button
+            key={n}
+            className={btnClass}
+            onClick={() => onChange(n)}
+          >
+            {n}
+          </button>
+        );
+      })}
 
       <button
         disabled={current === total}
